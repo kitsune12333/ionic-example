@@ -1,0 +1,7 @@
+{
+  "name": "Myaplicacion",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
