@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { userLogin } from '../models/userLogin';
-import { Router } from '@angular/router';
+import { Router ,NavigationExtras} from '@angular/router';
 Router
 
 @Component({
@@ -28,6 +28,13 @@ export class LoginPage implements OnInit {
     for(let i = 0; i < this.listUser.length; i++){
         if(this.username == this.listUser[i].correo && this.password == this.listUser[i].password){
           if(this.listUser[i].tipo_usuario == 'admin'){
+            console.log("admin")
+            let userInfo: NavigationExtras = {
+              state: {
+                user: this.listUser[i]
+              }
+            }
+            this.r.navigate(['usuario'],useraInfo)
             //navegar admin
           }else{
             //navegar
