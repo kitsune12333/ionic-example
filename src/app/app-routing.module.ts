@@ -8,9 +8,18 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'ingreso-de-usuario',
     pathMatch: 'full'
   },
+  {
+    path: 'ingreso-de-usuario',
+    loadChildren: () => import('./ingreso-de-usuario/ingreso-de-usuario.module').then( m => m.IngresoDeUsuarioPageModule)
+  },
+  {
+    path: 'restablecer-contra',
+    loadChildren: () => import('./restablecer-contra/restablecer-contra.module').then( m => m.RestablecerContraPageModule)
+  },
+
 ];
 
 @NgModule({
