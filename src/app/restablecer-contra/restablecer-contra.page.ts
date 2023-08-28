@@ -21,13 +21,14 @@ export class RestablecerContraPage{
   ngOnInit() {
   }
   recuperar() {
-    // Validar el nombre de usuario
-    if (this.username == 'usuario') {
-      // Redirigir a la página de ingreso
-      this.router.navigate(['/ingreso-de-usuario']);
-    } else {
+    console.log(this.username)
+    for(let i = 0; i < this.listUser.length; i++){
+        if(this.username == this.listUser[i].username){
+          this.router.navigate(['/ingreso-de-usuario']);
+     } else {
       // Mostrar mensaje de error
-      console.log('Usuario no encontrado');
+      console.log('usuario no encontrado');      
     }
+  }
   }
 }
