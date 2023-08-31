@@ -1,0 +1,50 @@
+ion-header{
+    position: absolute;
+}
+ion-toolbar{
+    --ion-background-color: transparent;
+    opacity: 0;
+}
+ion-content{
+    --ion-background-color: #E1EAF9;
+}
+ion-card{
+    --ion-background-color: transparent;
+    box-shadow: none;
+}
+.titulo-centrado{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Noto Sans New Tai Lue', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+.wrapform{
+    margin-top: 20px;
+}
+
+ion-item{
+    ion-input{
+        color: #6d6c70
+    }
+}
+.input-margin{
+    margin-left: 10px;
+}
+.recuperar_contr{
+    text-align: right;
+    ion-button{
+        font-size: 12px;
+    }
+}
+.ingresar-btn-wrap{
+    text-align: center;
+    padding-top: 25px;
+    .ingresar-btn{
+        --ion-primary-color:#215AB7;
+        color: #F4F6FA;
+    }
+}
