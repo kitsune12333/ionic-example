@@ -1,14 +1,25 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>Restablecer Contraseña</ion-title>
+    <ion-title>Inicio Sesión</ion-title>
   </ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaulthref="rest" text=""></ion-back-button>
+  </ion-buttons>
 </ion-header>
-
 <ion-content>
-  <ion-item>
-    <ion-label position="floating">Nombre de Usuario</ion-label>
-    <ion-input type="text" [(ngModel)]="username"></ion-input>
-  </ion-item>
-
-  <ion-button expand="full" (click)="recuperar()">Recuperar</ion-button>
+  <ion-card class="ion-no-margin">
+    <ion-img src="assets/images/header1.png"></ion-img>
+    <ion-title class="titulo-centrado">Restablecer Contraseña</ion-title>
+  </ion-card>
+  <ion-card-content>
+    <div class="wrapform">
+      <ion-item>
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-input class="input-margin" type="text" [(ngModel)]="username" placeholder=" Usuario"></ion-input>
+      </ion-item>
+      <div class="recuperar-btn-wrap">
+        <ion-button class="btn-recuperar" shape="round" fill="solid" expand="full" (click)="recuperar()">Recuperar</ion-button>
+      </div>
+    </div>
+  </ion-card-content>
 </ion-content>

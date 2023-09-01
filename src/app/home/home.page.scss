@@ -1,27 +1,40 @@
-#container {
-  text-align: center;
-
+ion-header{
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-toolbar{
+  --ion-background-color: transparent;
+  opacity: 0;
 }
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+ion-content{
+  --ion-background-color: #E1EAF9;
 }
+ion-card{
+  --ion-background-color: transparent;
+  box-shadow: none;
+}
+.titulo-centrado{
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Noto Sans New Tai Lue', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+}
+.photo{
+  width: 25%;
+  translate: 150%;
+}
+.info_usuario{
+  color: black;
+  text-align: center;
+}
+.info_container{
+  margin-left: 25px;
+  font-family: 'Noto Sans New Tai Lue', sans-serif;
+  .titulo_info{
+    font-weight: 700;
 
-#container a {
-  text-decoration: none;
+  }
 }

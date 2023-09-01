@@ -1,15 +1,22 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
-      Página de inicio
-    </ion-title>
+    <ion-title>Inicio Sesión</ion-title>
   </ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaulthref="home" text=""></ion-back-button>
+  </ion-buttons>
 </ion-header>
-
 <ion-content>
-  <div class="container">
-    <h1>Bienvenido a la página de inicio</h1>
-    <p>Usuario: {{ username }}</p>
-    <ion-button [routerLink]="['/ingreso-de-usuario']">login</ion-button>
+  <ion-card class="ion-no-margin">
+    <ion-img src="assets/images/header.png"></ion-img>
+    <ion-title class="titulo-centrado">Bienvenido</ion-title>
+  </ion-card>
+  <ion-img class="photo" src="assets/images/user-photo.png" ></ion-img>
+  <ion-card>
+    <ion-title class="info_usuario">Información Usuario</ion-title>
+  </ion-card>
+  <div class="info_container">
+    <p class="titulo_info">Alumno:</p>
+    <p class="titulo_info">Carrera:</p>
   </div>
 </ion-content>
