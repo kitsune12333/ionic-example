@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { IngresoPage } from '../models/ingreso-page.model';
+import { IngresoPage } from '../models/IngresoPage';
 
 @Component({
   selector: 'app-restablecer-contra',

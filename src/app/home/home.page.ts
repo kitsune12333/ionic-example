@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +7,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-  username!: string;
+  username: any;
 
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
     // Obtener el nombre de usuario de los datos del estado de la página de ingreso
-    this.username = this.activatedRoute.snapshot.paramMap.get('username')!;
+    this.username = this.activatedRoute.snapshot.params['username'];
+    console.log("Valor obtenido desde URL: ",this.username);
   }
 }
