@@ -38,3 +38,11 @@ ion-card{
 
   }
 }
+.cerrar-btn-wrap{
+  text-align: center;
+  padding-top: 25px;
+  .cerrar-btn{
+      --ion-primary-color:#215AB7;
+      color: #F4F6FA;
+  }
+}
