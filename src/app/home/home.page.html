@@ -16,10 +16,7 @@
     <ion-title class="info_usuario">Información Usuario</ion-title>
   </ion-card>
   <div class="info_container">
-    <p class="titulo_info">Alumno:</p>
-    <p class="titulo_info">Carrera:</p>
-    <p class="titulo_info">Email:</p>
-    <p class="titulo_info">Telefono:</p>
+    <p class="titulo_info">Usuario:{{ homeInfoReceived?.username }}</p>
   </div>
   <div class="cerrar-btn-wrap">
     <ion-button class="cerrar-btn" shape="round" fill="solid" [routerLink]="['/ingreso-de-usuario']">Cerrar Sesión</ion-button>

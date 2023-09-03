@@ -25,6 +25,7 @@ export class RestablecerContraPage{
     for(let i = 0; i < this.listUser.length; i++){
         if(this.username == this.listUser[i].username){
           this.router.navigate(['/ingreso-de-usuario']);
+          break
      } else {
       // Mostrar mensaje de error
       console.log('usuario no encontrado');      
