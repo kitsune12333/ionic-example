@@ -7,12 +7,17 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-  username!: string;
-
+  user!: any;
   constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
-    // Obtener el nombre de usuario de los datos del estado de la página de ingreso
-    this.username = this.activatedRoute.snapshot.paramMap.get('username')!;
+    // Obtener el usuario logueado desde el localStorage
+    this.user = JSON.parse(localStorage.getItem('user') ||'{}');
+  }
+  ngDoCheck() {
+    const updatedUser = JSON.parse(localStorage.getItem('user') || '{}');
+    if (JSON.stringify(this.user) !== JSON.stringify(updatedUser)) {
+      this.user = updatedUser;
+    }
   }
 }
